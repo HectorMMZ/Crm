@@ -19,6 +19,7 @@
                 Text="{Binding Path=Cust.FirstName}"
                 Placeholder="ejemp. Mateo"
                 BackgroundColor="WhiteSmoke"
+                TextColor="Black"
                 Margin="0,0,0,16"/>
 
             <Label Text="Proporcione los apellidos del contacto:"/>
@@ -26,6 +27,7 @@
                  Text="{Binding Path=Cust.LastName}"
                  Placeholder="ejemp. Peréz"
                  BackgroundColor="WhiteSmoke"
+                 TextColor="Black"
                  Margin="0,0,0,16"/>
             
             <Label Text="Proporcione el correo electronico del contacto:"/>
@@ -33,6 +35,7 @@
                  Text="{Binding Path=Cust.Email}"
                  Placeholder="ejemp: example@mail.com"
                  BackgroundColor="WhiteSmoke"
+                 TextColor="Black"
                  Margin="0,0,0,32"/>
             <Button Text="Guardar" Command="{Binding Path=SaveCommand}"/>
             

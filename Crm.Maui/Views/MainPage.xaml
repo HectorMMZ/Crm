@@ -7,6 +7,7 @@
              x:Class="Crm.Maui.Views.MainPage"
              Title="CRM"
              x:Name="Page">
+    
     <ContentPage.BindingContext>
         <viewmodels:MainViewModel/>
     </ContentPage.BindingContext>
@@ -41,7 +42,7 @@
                             <Label
                                 Grid.Row="1"
                                 Text="{Binding Path=Email}"
-                                TextColor="DarkGrey"/>
+                                TextColor="DarkBlue"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
