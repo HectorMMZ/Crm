@@ -8,7 +8,6 @@ namespace Crm.Maui
         public App()
         {
             InitializeComponent();
-            // Creación de las base de datos
             SQLitePCL.Batteries_V2.Init();
             using var context = new CrmDbContext();
             context.Database.EnsureCreated();

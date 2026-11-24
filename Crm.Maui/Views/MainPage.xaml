@@ -31,19 +31,32 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type models:Customer}">
-                        <Grid RowDefinitions=" auto,auto"
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItem
+                                    Text="Eliminar"
+                                    BackgroundColor="IndianRed"
+                                    Command="{Binding 
+                                    Path=BindingContext.DeleteCustomerCommand,
+                                    Source={RelativeSource Mode=FindAncestor,
+                                    AncestorType={x:Type CollectionView}}}"
+                                    CommandParameter="{Binding}"/>
+                            </SwipeView.RightItems>
+
+                            <Grid RowDefinitions=" auto,auto"
                               Padding="10">
-                            <Label 
+                                <Label 
                                 Grid.Row="0"
                                 Text="{Binding Path=FullName}"
                                 TextColor="Black"
                                 FontAttributes="Bold"
                                 />
-                            <Label
+                                <Label
                                 Grid.Row="1"
                                 Text="{Binding Path=Email}"
                                 TextColor="DarkBlue"/>
-                        </Grid>
+                            </Grid>
+                        </SwipeView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
 
@@ -60,6 +73,5 @@
             Margin="16"/>
         
     </Grid>
-
 
 </ContentPage>

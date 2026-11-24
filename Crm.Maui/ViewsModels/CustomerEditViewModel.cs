@@ -34,16 +34,16 @@ namespace Crm.Maui.ViewsModels
         [RelayCommand]
         public async Task SaveAsync()
         {
-            //Guardar en la bd a nuevo cliente
+            // Guardar en la base de datos a un nuevo cliente
             using CrmDbContext dbContext= new CrmDbContext();
             await dbContext.Customers.AddAsync(Cust);
             await dbContext.SaveChangesAsync();
 
-            /*Agregamos el nuevo cliente a la colección Customers de la pantalla padre invocando 
-             * a ParentRefreshAction*/
+            // Agregamos el nuevo cliente a la colección Customers de la pantalla padre invocando 
+            // a ParentRefreshAction
             await ParentRefreshAction(Cust);
 
-            //regresar a la pantalla padre
+            // Regresar a la pantalla padre
             await Shell.Current.GoToAsync("..");
         }
     }

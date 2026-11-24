@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Crm.Maui.Views"
+             xmlns:models="clr-namespace:Crm.Maui.Models"
+             x:Class="Crm.Maui.Views.CustomerDetailPage"
+             Title="Informacion del cliente">
+    
+    <VerticalStackLayout
+        Padding="16">
+        <Label
+            Text="Id:"/>
+        <Label
+            Text="1"
+            Margin="0,0,0,16"/>
+        <Label
+            Text="Nombre"/>
+        <Label
+            Text="Parker"/>
+        <Label
+            Text="Apellido"/>
+        <Label
+            Text="Parker"/>
+        <Label
+            Text="Correo"/>
+        <Label
+            Text="peter.parker@email.com"/>
+    </VerticalStackLayout>
+</ContentPage>

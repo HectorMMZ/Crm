@@ -40,10 +40,22 @@ namespace Crm.Maui.Views
         }
 
         //este metodo actualiza el nuevo cliente agregandolo a la colección
-        private Task RefreshAddedAsync (Customer addedCustomer)
+        public Task RefreshAddedAsync (Customer addedCustomer)
         {
             Customers.Add(addedCustomer);
             return Task.CompletedTask;
+        }
+
+        [RelayCommand]
+        public void DeleteCustomer(Customer customer)
+        {
+            using var dbContext = new CrmDbContext();
+            //elimina del modelo de la base de datos
+            dbContext.Customers.Remove(customer);
+            //elimina de la base de datos
+            dbContext.SaveChanges();
+
+            Customers.Remove(customer);
         }
     }
 }
